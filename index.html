@@ -43,6 +43,23 @@
             font-size: 2.2rem;
             margin-bottom: 30px;
         }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            margin: 30px auto;
+            max-width: 900px;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -115,7 +132,16 @@
         <h1>Zubidat Technical Dashboard PRO</h1>
         <p>Powerful multi-timeframe analysis directly on TradingView – real technical summary</p>
     </header>
+
     <div class="container">
+        <!-- === IMPORTANT NOTE / DISCLAIMER (from previous update) === -->
+        <section style="background: #fff3e0; padding: 25px; border-radius: 12px; margin: 30px auto; max-width: 800px; text-align: center; border-left: 5px solid #f57c00;">
+            <h3 style="margin-top: 0; color: #e65100;">Important Note</h3>
+            <p style="margin: 0; font-size: 1.05rem;">
+                While Zubidat Technical Dashboard PRO is a powerful analytical tool that combines multiple proven indicators for clearer market insight, no indicator is infallible or guarantees profitable results. Trading involves significant risk of loss. Use this dashboard solely as confirmation alongside your own analysis, risk management, and trading plan. Past performance of any tool or strategy does not indicate future results.
+            </p>
+        </section>
+
         <section>
             <h2>Why Traders Love It</h2>
             <div class="features">
@@ -133,6 +159,7 @@
                 </div>
             </div>
         </section>
+
         <section>
             <h2>Live Dashboard Preview</h2>
             <img src="/indicator-screenshot.png"
@@ -142,6 +169,7 @@
                 Full MTF table with Strong Buy signals – clean and professional layout
             </p>
         </section>
+
         <section>
             <h2>Multi-Timeframe View</h2>
             <img src="/mtf-analysis.png"
@@ -151,7 +179,27 @@
                 Quick glance at 1 Min to Monthly ratings – just like a pro trader
             </p>
         </section>
-        <!-- === UPDATED PRICING & PAYMENT SECTION (Source Code Delivery) === -->
+
+        <!-- === NEW YOUTUBE VIDEO SECTION ADDED HERE === -->
+        <section>
+            <h2>How I Use Static Volume Profile + This Indicator to Take Trades</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 20px; color: #444;">
+                Watch this step-by-step guide on combining static/fixed range volume profile analysis with the Zubidat Dashboard for high-probability entries and exits.
+            </p>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/VRLdUF9suxA?rel=0&modestbranding=1&showinfo=0" 
+                    title="How I Use Static Volume Profile and the Indicator to Take Trades" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="text-align: center; font-style: italic; color: #555; margin-top: 15px;">
+                (Replace with your own video embed URL for a custom tutorial tailored to Zubidat PRO)
+            </p>
+        </section>
+
         <section class="pricing">
             <h2>Pricing & Payment</h2>
             <p style="font-size: 1.8rem; text-align: center; margin: 20px 0;">
@@ -166,7 +214,6 @@
                 <code class="address-code">
                     TCZdLcVNDETxtv4zgiEtPN5H683KenkddA
                 </code>
-                <!-- QR Code (upload your generated PNG as usdt-qr-code.png) -->
                 <img src="/usdt-qr-code.png"
                      alt="Scan to Pay 49 USDT TRC-20"
                      class="qr-img">
