@@ -1,44 +1,209 @@
-<section class="pricing">
-    <h2>Pricing & Payment</h2>
-    <p style="font-size: 1.8rem; text-align: center; margin: 20px 0;">
-        One-time payment: <strong>49 USDT</strong><br>
-        <small>Lifetime invite-only access to the indicator</small>
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zubidat - TradingView Indicator</title>
+    <meta name="description" content="Premium indicator with advance technical analysis – full MTF dashboard, Strong Buy/Sell signals, 11 indicators + 12 moving averages.">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+        }
+        header p {
+            font-size: 1.3rem;
+            margin: 15px 0 30px;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            margin: 60px 0;
+        }
+        h2 {
+            color: #1a73e8;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .preview-img, .qr-img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            margin: 20px auto;
+            display: block;
+        }
+        .qr-img {
+            max-width: 220px;
+            border: 8px solid #fff;
+        }
+        .pricing-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 580px;
+            margin: 40px auto;
+            text-align: left;
+        }
+        .address-code {
+            word-break: break-all;
+            font-size: 1.15rem;
+            background: #f0f0f0;
+            padding: 12px;
+            border-radius: 8px;
+            display: block;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+        .warning {
+            font-size: 0.95rem;
+            color: #d32f2f;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 12px;
+            background: #ffebee;
+            border-radius: 8px;
+        }
+        footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1.1rem; }
+            h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
 
-    <div class="pricing-box">
-        <h3>Pay with USDT (TRC-20 on Tron)</h3>
-        <p><strong>Amount:</strong> Exactly 49 USDT</p>
-        <p><strong>Network:</strong> TRC-20 (Tron) – do NOT use ERC-20, BEP-20 or other chains</p>
-        <p><strong>Wallet Address:</strong></p>
-        <code class="address-code">
-            TCZdLcVNDETxtv4zgiEtPN5H683KenkddA
-        </code>
+    <header>
+        <h1>Zubidat Technical Dashboard PRO</h1>
+        <p>Powerful multi-timeframe analysis directly on TradingView – real technical summary</p>
+    </header>
 
-        <!-- QR Code (upload your generated PNG as usdt-qr-code.png) -->
-        <img src="/usdt-qr-code.png" 
-             alt="Scan to Pay 49 USDT TRC-20" 
-             class="qr-img">
+    <div class="container">
 
-        <p><strong>Payment Instructions:</strong></p>
-        <ol>
-            <li>Send <strong>exactly 49 USDT</strong> using <strong>TRC-20 (Tron)</strong> network from your wallet or exchange (Binance, Trust Wallet, etc.).</li>
-            <li>After the transaction confirms in your wallet, copy the Transaction ID (TXID / Hash).</li>
-            <li>Email the following to <strong><a href="mailto:info@zubidat.co.uk">info@zubidat.co.uk</a></strong>:</li>
-            <ul>
-                <li>Your TradingView username (the exact one you use on the platform)</li>
-                <li>The TXID / transaction hash as proof</li>
-                <li>Optional: screenshot of the sent transaction for faster verification</li>
-            </ul>
-            <li>I will check the blockchain (usually within minutes to a few hours), confirm receipt, and manually add your username to the invite-only script access list on TradingView.</li>
-            <li>You'll receive a confirmation email once access is granted – then you can add the indicator to your charts.</li>
-        </ol>
+        <section>
+            <h2>Why Traders Love It</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Realtime analysis & Logic</h3>
+                    <p>Combine multiple indicators into one producing buy/sell/neutral counts</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Full Multi-Timeframe</h3>
+                    <p>1 Min → Monthly overview – see Strong Buy/Sell across all major timeframes</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Live & Clean</h3>
+                    <p>Real-time updates, beautiful table display, customizable position</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="warning">
-            ⚠️ Important: Always double-check the address and select TRC-20 network before sending. Sending on the wrong network or wrong amount = permanent loss of funds (no refunds possible). I will only grant access after I personally confirm the funds arrived in my wallet.
-        </div>
+        <section>
+            <h2>Live Dashboard Preview</h2>
+            <img src="/indicator-screenshot.png"
+                 alt="Investing.com Style Technical Summary Dashboard"
+                 class="preview-img">
+            <p style="text-align: center; font-style: italic; color: #555;">
+                Full MTF table with Strong Buy signals – clean and professional layout
+            </p>
+        </section>
+
+        <section>
+            <h2>Multi-Timeframe View</h2>
+            <img src="/mtf-analysis.png"
+                 alt="Multi Timeframe Analysis Section"
+                 class="preview-img">
+            <p style="text-align: center; font-style: italic; color: #555;">
+                Quick glance at 1 Min to Monthly ratings – just like a pro trader
+            </p>
+        </section>
+
+        <!-- === YOUR REQUESTED PRICING & USDT PAYMENT SECTION === -->
+        <section class="pricing">
+            <h2>Pricing & Payment</h2>
+            <p style="font-size: 1.8rem; text-align: center; margin: 20px 0;">
+                One-time payment: <strong>49 USDT</strong><br>
+                <small>Lifetime invite-only access to the indicator</small>
+            </p>
+            <div class="pricing-box">
+                <h3>Pay with USDT (TRC-20 on Tron)</h3>
+                <p><strong>Amount:</strong> Exactly 49 USDT</p>
+                <p><strong>Network:</strong> TRC-20 (Tron) – do NOT use ERC-20, BEP-20 or other chains</p>
+                <p><strong>Wallet Address:</strong></p>
+                <code class="address-code">
+                    TCZdLcVNDETxtv4zgiEtPN5H683KenkddA
+                </code>
+                <!-- QR Code (upload your generated PNG as usdt-qr-code.png) -->
+                <img src="/usdt-qr-code.png"
+                     alt="Scan to Pay 49 USDT TRC-20"
+                     class="qr-img">
+                <p><strong>Payment Instructions:</strong></p>
+                <ol>
+                    <li>Send <strong>exactly 49 USDT</strong> using <strong>TRC-20 (Tron)</strong> network from your wallet or exchange (Binance, Trust Wallet, etc.).</li>
+                    <li>After the transaction confirms in your wallet, copy the Transaction ID (TXID / Hash).</li>
+                    <li>Email the following to <strong><a href="mailto:info@zubidat.co.uk">info@zubidat.co.uk</a></strong>:</li>
+                    <ul>
+                        <li>Your TradingView username (the exact one you use on the platform)</li>
+                        <li>The TXID / transaction hash as proof</li>
+                        <li>Optional: screenshot of the sent transaction for faster verification</li>
+                    </ul>
+                    <li>I will check the blockchain (usually within minutes to a few hours), confirm receipt, and manually add your username to the invite-only script access list on TradingView.</li>
+                    <li>You'll receive a confirmation email once access is granted – then you can add the indicator to your charts.</li>
+                </ol>
+                <div class="warning">
+                    ⚠️ Important: Always double-check the address and select TRC-20 network before sending. Sending on the wrong network or wrong amount = permanent loss of funds (no refunds possible). I will only grant access after I personally confirm the funds arrived in my wallet.
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 1.1rem;">
+                Questions or need help? Reply directly to info@zubidat.co.uk
+            </p>
+        </section>
+
     </div>
 
-    <p style="text-align: center; margin-top: 40px; font-size: 1.1rem;">
-        Questions or need help? Reply directly to info@zubidat.co.uk
-    </p>
-</section>
+    <footer>
+        <p>&copy; 2026 Zubidat.co.uk – Premium TradingView Tools</p>
+        <p>Contact: info@zubidat.co.uk</p>
+    </footer>
+
+</body>
+</html>
