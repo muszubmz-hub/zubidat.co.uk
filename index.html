@@ -113,6 +113,64 @@
             background: #ffebee;
             border-radius: 8px;
         }
+        /* === Contact Form Styles === */
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button[type="submit"]:hover {
+            background: #0d47a1;
+        }
+        .success-message {
+            display: none;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .honeypot {
+            display: none;
+        }
         footer {
             background: #222;
             color: #aaa;
@@ -124,6 +182,7 @@
             header h1 { font-size: 2.2rem; }
             header p { font-size: 1.1rem; }
             h2 { font-size: 1.8rem; }
+            .contact-form { padding: 25px; }
         }
     </style>
 </head>
@@ -132,16 +191,14 @@
         <h1>Zubidat Technical Dashboard PRO</h1>
         <p>Powerful multi-timeframe analysis directly on TradingView – real technical summary</p>
     </header>
-
     <div class="container">
-        <!-- === IMPORTANT NOTE / DISCLAIMER (from previous update) === -->
+        <!-- === IMPORTANT NOTE / DISCLAIMER === -->
         <section style="background: #fff3e0; padding: 25px; border-radius: 12px; margin: 30px auto; max-width: 800px; text-align: center; border-left: 5px solid #f57c00;">
             <h3 style="margin-top: 0; color: #e65100;">Important Note</h3>
             <p style="margin: 0; font-size: 1.05rem;">
                 While Zubidat Technical Dashboard PRO is a powerful analytical tool that combines multiple proven indicators for clearer market insight, no indicator is infallible or guarantees profitable results. Trading involves significant risk of loss. Use this dashboard solely as confirmation alongside your own analysis, risk management, and trading plan. Past performance of any tool or strategy does not indicate future results.
             </p>
         </section>
-
         <section>
             <h2>Why Traders Love It</h2>
             <div class="features">
@@ -159,7 +216,6 @@
                 </div>
             </div>
         </section>
-
         <section>
             <h2>Live Dashboard Preview</h2>
             <img src="/indicator-screenshot.png"
@@ -169,7 +225,6 @@
                 Full MTF table with Strong Buy signals – clean and professional layout
             </p>
         </section>
-
         <section>
             <h2>Multi-Timeframe View</h2>
             <img src="/mtf-analysis.png"
@@ -179,19 +234,18 @@
                 Quick glance at 1 Min to Monthly ratings – just like a pro trader
             </p>
         </section>
-
-        <!-- === NEW YOUTUBE VIDEO SECTION ADDED HERE === -->
+        <!-- === NEW YOUTUBE VIDEO SECTION === -->
         <section>
             <h2>How I Use Static Volume Profile + This Indicator to Take Trades</h2>
             <p style="text-align: center; font-size: 1.1rem; margin-bottom: 20px; color: #444;">
                 Watch this step-by-step guide on combining static/fixed range volume profile analysis with the Zubidat Dashboard for high-probability entries and exits.
             </p>
             <div class="video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/VRLdUF9suxA?rel=0&modestbranding=1&showinfo=0" 
-                    title="How I Use Static Volume Profile and the Indicator to Take Trades" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                <iframe
+                    src="https://www.youtube.com/embed/VRLdUF9suxA?rel=0&modestbranding=1&showinfo=0"
+                    title="How I Use Static Volume Profile and the Indicator to Take Trades"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
             </div>
@@ -199,7 +253,6 @@
                 (Replace with your own video embed URL for a custom tutorial tailored to Zubidat PRO)
             </p>
         </section>
-
         <section class="pricing">
             <h2>Pricing & Payment</h2>
             <p style="font-size: 1.8rem; text-align: center; margin: 20px 0;">
@@ -244,10 +297,63 @@
                 Questions or need help? Reply directly to info@zubidat.co.uk
             </p>
         </section>
+
+        <!-- === NEW CONTACT SECTION === -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #555;">
+                Have questions about the indicator, setup, or trading? Send me a message – I'll get back to you quickly.
+            </p>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                <!-- Replace with your real Access Key from web3forms.com -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                
+                <!-- Optional: customize email subject & from name -->
+                <input type="hidden" name="subject" value="New Contact from Zubidat Website">
+                <input type="hidden" name="from_name" value="Zubidat Contact Form">
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                </div>
+
+                <!-- Optional: add email field if you want replies easier -->
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+                </div>
+
+                <!-- Honeypot spam protection (hidden from real users) -->
+                <input type="checkbox" name="botcheck" class="honeypot" style="display:none;" tabindex="-1">
+
+                <button type="submit">Send Message</button>
+
+                <div class="success-message" id="successMsg">
+                    Thank you! Your message has been sent successfully. I'll reply soon.
+                </div>
+            </form>
+        </section>
     </div>
     <footer>
         <p>© 2026 Zubidat.co.uk – Premium TradingView Tools</p>
-        <p>Contact: info@zubidat.co.uk</p>
+        <p>Contact: <a href="mailto:info@zubidat.co.uk" style="color: #4da6ff;">info@zubidat.co.uk</a></p>
     </footer>
+
+    <!-- Simple JS for success message (no jQuery needed) -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // Show success message after submit (Web3Forms redirects or reloads page, but this gives instant feedback)
+            setTimeout(() => {
+                document.getElementById('successMsg').style.display = 'block';
+                // Optional: reset form
+                this.reset();
+            }, 800);
+        });
+    </script>
 </body>
 </html>
