@@ -45,7 +45,7 @@
         }
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 12px;
@@ -113,7 +113,6 @@
             background: #ffebee;
             border-radius: 8px;
         }
-        /* === Contact Form Styles === */
         .contact-form {
             background: white;
             padding: 40px;
@@ -178,11 +177,36 @@
             padding: 40px 20px;
             margin-top: 80px;
         }
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Payment choice banner */
+        .payment-choice {
+            font-size: 2.0rem;
+            font-weight: bold;
+            color: #1a73e8;
+            text-align: center;
+            margin: 20px 0 40px;
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #bbdefb;
+        }
+        .payment-choice a {
+            color: #1a73e8;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .payment-choice a:hover {
+            color: #0d47a1;
+        }
         @media (max-width: 768px) {
             header h1 { font-size: 2.2rem; }
             header p { font-size: 1.1rem; }
             h2 { font-size: 1.8rem; }
             .contact-form { padding: 25px; }
+            .payment-choice { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -190,23 +214,24 @@
     <header>
         <h1>Zubidat Technical Dashboard PRO</h1>
         <p>
-    Powerful multi-timeframe analysis directly on TradingView – real technical summary
-    <br>
-    <span style="font-size:1.4rem;font-weight:700;color:#ffd54f;">
-        LIMITED TIME OFFER: 
-        <span style="text-decoration: line-through; color:#ffccbc;">$299</span>
-        → $99
-    </span>
-</p>
+            Powerful multi-timeframe analysis directly on TradingView – real technical summary
+            <br>
+            <span style="font-size:1.4rem;font-weight:700;color:#ffd54f;">
+                LIMITED TIME OFFER:
+                <span style="text-decoration: line-through; color:#ffccbc;">$299</span>
+                → $99
+            </span>
+        </p>
     </header>
     <div class="container">
-        <!-- === IMPORTANT NOTE / DISCLAIMER === -->
+        <!-- IMPORTANT NOTE / DISCLAIMER -->
         <section style="background: #fff3e0; padding: 25px; border-radius: 12px; margin: 30px auto; max-width: 800px; text-align: center; border-left: 5px solid #f57c00;">
             <h3 style="margin-top: 0; color: #e65100;">Important Note</h3>
             <p style="margin: 0; font-size: 1.05rem;">
                 While Zubidat Technical Dashboard PRO is a powerful analytical tool that combines multiple proven indicators for clearer market insight, no indicator is infallible or guarantees profitable results. Trading involves significant risk of loss. Use this dashboard solely as confirmation alongside your own analysis, risk management, and trading plan. Past performance of any tool or strategy does not indicate future results.
             </p>
         </section>
+
         <section>
             <h2>Why Traders Love It</h2>
             <div class="features">
@@ -224,158 +249,163 @@
                 </div>
             </div>
         </section>
+
         <section>
             <h2>Live Dashboard Preview</h2>
-            <img src="/indicator-screenshot.png"
-                 alt="Investing.com Style Technical Summary Dashboard"
-                 class="preview-img">
+            <img src="/indicator-screenshot.png" alt="Investing.com Style Technical Summary Dashboard" class="preview-img">
             <p style="text-align: center; font-style: italic; color: #555;">
                 Full MTF table with Strong Buy signals – clean and professional layout
             </p>
         </section>
+
         <section>
             <h2>Multi-Timeframe View</h2>
-            <img src="/mtf-analysis.png"
-                 alt="Multi Timeframe Analysis Section"
-                 class="preview-img">
+            <img src="/mtf-analysis.png" alt="Multi Timeframe Analysis Section" class="preview-img">
             <p style="text-align: center; font-style: italic; color: #555;">
                 Quick glance at 1 Min to Monthly ratings – just like a pro trader
             </p>
         </section>
-        <!-- === NEW YOUTUBE VIDEO SECTION === -->
+
         <section>
-            <h2>How To Use Static Volume Profile + This Indicator to Take Trades</h2>
+            <h2>Example Strategy: Fixed Range Volume Profile and Zubidat Dashboard Pro</h2>
             <p style="text-align: center; font-size: 1.1rem; margin-bottom: 20px; color: #444;">
-                Watch this step-by-step guide on combining static/fixed range volume profile analysis with the Zubidat Dashboard for high-probability entries and exits.
+                Watch this step-by-step guide on combining fixed range volume profile analysis with the Zubidat Dashboard Pro for high-probability entries and exits.
             </p>
             <div class="video-wrapper">
-                <iframe
-                    src="https://www.youtube.com/embed/VRLdUF9suxA?rel=0&modestbranding=1&showinfo=0"
-                    title="How I Use Static Volume Profile and the Indicator to Take Trades"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                <iframe src="https://www.youtube.com/embed/VRLdUF9suxA?rel=0&modestbranding=1&showinfo=0"
+                        title="How I Use Static Volume Profile and the Indicator to Take Trades"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
             </div>
             <p style="text-align: center; font-style: italic; color: #555; margin-top: 15px;">
                 (Replace with your own video embed URL for a custom tutorial tailored to Zubidat PRO)
             </p>
         </section>
+
         <section class="pricing">
             <h2>Pricing & Payment</h2>
+            <div class="payment-choice">
+                Choose Payment: <a href="#paypal-section">PayPal</a> or <a href="#usdt-section">USDT</a>
+            </div>
+
             <p style="font-size: 2rem; text-align: center; margin: 20px 0;">
-    <span style="background:#ff5252;color:white;padding:6px 14px;border-radius:6px;font-size:0.9rem;margin-right:10px;">
-        LIMITED TIME OFFER
-    </span>
-</p>
+                <span style="background:#ff5252;color:white;padding:6px 14px;border-radius:6px;font-size:0.9rem;margin-right:10px;">
+                    LIMITED TIME OFFER
+                </span>
+            </p>
+            <p style="font-size: 2.2rem; text-align: center; margin: 10px 0;">
+                <span style="text-decoration: line-through; color:#888; font-size:1.6rem;">$299</span>
+                <strong style="color:#1a73e8; margin-left:10px;">$99</strong>
+            </p>
+            <p style="text-align:center; font-size:1.1rem;">
+                One-time payment • Lifetime access<br>
+                <small>Full Pine Script source code + setup instructions</small>
+            </p>
 
-<p style="font-size: 2.2rem; text-align: center; margin: 10px 0;">
-    <span style="text-decoration: line-through; color:#888; font-size:1.6rem;">
-        $299
-    </span>
-    <strong style="color:#1a73e8; margin-left:10px;">
-        $99
-    </strong>
-</p>
-
-<p style="text-align:center; font-size:1.1rem;">
-    One-time payment • Lifetime access<br>
-    <small>Full Pine Script source code + setup instructions</small>
-</p>
             <div class="pricing-box">
-                <h3>Pay with USDT (TRC-20 on Tron)</h3>
-                <p><strong>Amount:</strong> Exactly 99 USDT</p>
-                <p><strong>Network:</strong> TRC-20 (Tron) – do NOT use ERC-20, BEP-20 or other chains</p>
-                <p><strong>Wallet Address:</strong></p>
-                <code class="address-code">
-                    TCZdLcVNDETxtv4zgiEtPN5H683KenkddA
-                </code>
-                <img src="/usdt-qr-code.png"
-                     alt="Scan to Pay 99 USDT TRC-20"
-                     class="qr-img">
-                <p><strong>Payment Instructions:</strong></p>
-                <ol>
-                    <li>Send <strong>exactly 99 USDT</strong> using <strong>TRC-20 (Tron)</strong> network from your wallet or exchange (Binance, Trust Wallet, etc.).</li>
-                    <li>After the transaction confirms in your wallet, copy the Transaction ID (TXID / Hash).</li>
-                    <li>Email the following to <strong><a href="mailto:muszub@outlook.com">muszub@outlook.com</a></strong>:</li>
-                    <ul>
-                        <li>Your TradingView username (the exact one you use on the platform)</li>
-                        <li>The TXID / transaction hash as proof</li>
-                        <li>Optional: screenshot of the sent transaction for faster verification</li>
-                    </ul>
-                    <li>I will check the blockchain (usually within minutes to a few hours) and confirm receipt.</li>
-                    <li>Once confirmed, I will email you:
-                        <ul>
-                            <li>The full Pine Script **source code** (.pine file or plain text)</li>
-                            <li>Detailed step-by-step instructions on how to add it to TradingView (copy-paste into Pine Editor → Save → Add to chart)</li>
-                        </ul>
-                    </li>
-                    <li>You'll receive everything via email – then simply follow the instructions to install and use the indicator on your charts.</li>
-                </ol>
-                <div class="warning">
-                    ⚠️ Important: Always double-check the address and select TRC-20 network before sending. Sending on the wrong network or wrong amount = permanent loss of funds (no refunds possible). Access (source code) is granted only after I personally confirm the funds arrived in my wallet.
+                <!-- PayPal First -->
+                <div id="paypal-section">
+                    <h3>Pay with PayPal (Card or Balance)</h3>
+                    <p><strong>Amount:</strong> $99 USD (one-time payment)</p>
+                    <p style="margin: 25px 0;">
+                        <a href="https://paypal.me/zubidatpro/99USD"
+                           style="background: #1a73e8; color: white; padding: 16px 42px; font-size: 1.2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.25s;"
+                           target="_blank">
+                            Pay $99 with PayPal →
+                        </a>
+                    </p>
+                    <p style="font-size: 1rem; color: #555; margin-top: 20px;">
+                        After payment, email <strong>muszub@outlook.com</strong> with:<br>
+                        • Your TradingView username<br>
+                        • Screenshot of the PayPal payment / transaction details
+                    </p>
+                    <p style="font-size: 0.95rem; color: #777; margin-top: 15px;">
+                        You'll receive the full source code + setup guide within hours after verification.
+                    </p>
+                </div>
+
+                <!-- Divider between sections -->
+                <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
+
+                <!-- USDT Second -->
+                <div id="usdt-section">
+                    <h3>Pay with USDT (TRC-20 on Tron)</h3>
+                    <p><strong>Amount:</strong> Exactly 99 USDT</p>
+                    <p><strong>Network:</strong> TRC-20 (Tron) – do NOT use ERC-20, BEP-20 or other chains</p>
+                    <p><strong>Wallet Address:</strong></p>
+                    <code class="address-code">TCZdLcVNDETxtv4zgiEtPN5H683KenkddA</code>
+                    <img src="/usdt-qr-code.png" alt="Scan to Pay 99 USDT TRC-20" class="qr-img">
+                    <p><strong>Payment Instructions:</strong></p>
+                    <ol>
+                        <li>Send <strong>exactly 99 USDT</strong> using <strong>TRC-20 (Tron)</strong> network from your wallet or exchange (Binance, Trust Wallet, etc.).</li>
+                        <li>After the transaction confirms, copy the Transaction ID (TXID / Hash).</li>
+                        <li>Email to <strong><a href="mailto:muszub@outlook.com">muszub@outlook.com</a></strong>:
+                            <ul>
+                                <li>Your TradingView username (exact)</li>
+                                <li>The TXID / transaction hash as proof</li>
+                                <li>Optional: screenshot of the sent transaction</li>
+                            </ul>
+                        </li>
+                        <li>I will verify on the blockchain (usually within minutes to hours).</li>
+                        <li>Once confirmed, you will receive:
+                            <ul>
+                                <li>Full Pine Script source code</li>
+                                <li>Step-by-step installation instructions for TradingView</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <div class="warning">
+                        ⚠️ Important: Always double-check the address and select TRC-20 network. Wrong network or amount = permanent loss (no refunds). Access granted only after confirmation.
+                    </div>
                 </div>
             </div>
+
             <p style="text-align: center; margin-top: 40px; font-size: 1.1rem;">
                 Questions or need help? Reply directly to muszub@outlook.com
             </p>
         </section>
 
-        <!-- === NEW CONTACT SECTION === -->
         <section id="contact">
-            <h2>Contact Me</h2>
+            <h2>Contact Form</h2>
             <p style="text-align: center; margin-bottom: 40px; color: #555;">
                 Have questions about the indicator, setup, or trading? Send me a message – I'll get back to you quickly.
             </p>
             <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                <!-- Replace with your real Access Key from web3forms.com -->
                 <input type="hidden" name="access_key" value="92715262-b801-4c0d-86e0-5b7a8f28d822">
-		<input type="hidden" name="to" value="muszub@outlook.com">
-		<input type="hidden" name="subject" value="New Contact from Zubidat Website">
-                
-                <!-- Optional: customize email subject & from name -->
+                <input type="hidden" name="to" value="muszub@outlook.com">
                 <input type="hidden" name="subject" value="New Contact from Zubidat Website">
                 <input type="hidden" name="from_name" value="Zubidat Contact Form">
-
                 <div class="form-group">
                     <label for="name">Full Name *</label>
                     <input type="text" id="name" name="name" required placeholder="Your full name">
                 </div>
-
-                <!-- Optional: add email field if you want replies easier -->
                 <div class="form-group">
                     <label for="email">Email Address *</label>
                     <input type="email" id="email" name="email" required placeholder="your@email.com">
                 </div>
-
                 <div class="form-group">
                     <label for="message">Message *</label>
                     <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
                 </div>
-
-                <!-- Honeypot spam protection (hidden from real users) -->
                 <input type="checkbox" name="botcheck" class="honeypot" style="display:none;" tabindex="-1">
-
                 <button type="submit">Send Message</button>
-
                 <div class="success-message" id="successMsg">
                     Thank you! Your message has been sent successfully. I'll reply soon.
                 </div>
             </form>
         </section>
     </div>
+
     <footer>
-        <p>© 2026 Zubidat.co.uk – Premium TradingView Tools</p>
+        <p>© 2026 zubidat.co.uk – Premium TradingView Tools</p>
         <p>Contact: <a href="mailto:muszub@outlook.com" style="color: #4da6ff;">muszub@outlook.com</a></p>
     </footer>
 
-    <!-- Simple JS for success message (no jQuery needed) -->
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            // Show success message after submit (Web3Forms redirects or reloads page, but this gives instant feedback)
             setTimeout(() => {
                 document.getElementById('successMsg').style.display = 'block';
-                // Optional: reset form
                 this.reset();
             }, 800);
         });
